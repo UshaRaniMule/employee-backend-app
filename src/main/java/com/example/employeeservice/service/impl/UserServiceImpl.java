@@ -1,7 +1,5 @@
 package com.example.employeeservice.service.impl;
 
-import java.util.List;
-
 import org.springframework.stereotype.Service;
 
 import com.example.employeeservice.model.User;
@@ -27,4 +25,9 @@ private UserRepository userRepository;
 		return userRepository.findByUsername(username);
 	}
 
+	@Override
+	public User saveUser(User user) {
+		// TODO Auto-generated method stub
+		return userRepository.save(user);
+	}
 }
